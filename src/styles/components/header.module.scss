@@ -1,6 +1,24 @@
 @use '../utilities/variables' as c;
 .navbar {
 	background-color: c.$primary-color;
-	width: 100%;
+	width: auto;
 	height: 100px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	color: c.$primary-text-color;
+	padding: 15px;
+	p {
+		font-size: 1.5em;
+		padding-left: 30px;
+	}
+}
+
+.icons {
+	display: flex;
+	gap: 15px;
+	button {
+		background: none;
+		border-style: none;
+	}
 }
