@@ -1,0 +1,6 @@
+@use '../utilities/variables' as c;
+.navbar {
+	background-color: c.$primary-color;
+	width: 100%;
+	height: 100px;
+}

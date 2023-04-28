@@ -1,0 +1,4 @@
+@use '../utilities/variables' as c;
+.main {
+	background-color: c.$primary-color;
+}
