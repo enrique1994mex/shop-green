@@ -1,7 +1,6 @@
 @use '../utilities/variables' as c;
 @import '../utilities/mixins';
 .navbar {
-	background-color: c.$primary-color;
 	width: auto;
 	height: 100px;
 	@include flexCenter(row, space-between, center);
