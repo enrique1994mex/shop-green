@@ -2,31 +2,50 @@
 @import '../utilities/mixins';
 .main {
 	color: c.$primary-text-color;
-	padding: 0 60px;
+	padding: 0 40px;
 	max-width: 100vw;
 	article {
 		width: auto;
-		display: grid;
-		grid-template-columns: 50% auto;
-		justify-content: space-between;
-		min-height: 80vh;
+		display: flex;
+		flex-direction: column-reverse;
+		@include small {
+			display: grid;
+			grid-template-columns: 2fr 1fr;
+		}
 	}
 }
 
 .impact {
-	padding-top: 50px;
-	@include flexCenter(column, space-evenly, flex-start);
-	row-gap: 25px;
+	padding-top: 10px;
+	@include flexCenter(column, space-evenly, center);
+	@include large {
+		padding-top: 50px;
+		@include flexCenter(column, flex-start, flex-start);
+		row-gap: 5rem;
+	}
+	row-gap: 20px;
 	h1 {
-		font-size: 3em;
+		font-size: 1.5em;
+		@include small {
+			font-size: 2em;
+		}
+		@include large {
+			font-size: 3em;
+		}
 		padding: 0px;
 		margin: 0px;
 	}
 	p {
-		font-size: 1.5em;
+		font-size: 1em;
+		@include small {
+			font-size: 1.2em;
+		}
+		@include large {
+			font-size: 1.5em;
+		}
+		margin: 0px;
 	}
 	button {
-		width: 12vw;
 		padding: 20px;
 		background: c.$quaternion-color;
 		border-style: none;
@@ -40,8 +59,16 @@
 }
 
 .image {
+	display: flex;
+	justify-content: center;
 	img {
-		width: 25vw;
+		object-fit: cover;
+		width: 336px;
+		height: 362px;
+		@include large {
+			width: 550px;
+			height: 686px;
+		}
 		border-radius: 19px;
 	}
 }
@@ -49,7 +76,6 @@
 .product {
 	width: 100%;
 	height: auto;
-	padding: 60px;
 
 	h2 {
 		font-size: 1.7em;
@@ -61,16 +87,22 @@
 			padding-bottom: 60px;
 		}
 		.card {
-			@include flexCenter(row, center, center);
+			@include flexCenter(row, space-between, center);
 			width: auto;
 			height: auto;
-			column-gap: 100px;
-			row-gap: 80px;
+			row-gap: 20px;
+			@include tablet {
+				column-gap: 60px;
+			}
 			flex-wrap: wrap;
 		}
 		.productCard {
-			width: 16vw;
+			width: 178px;
 			height: auto;
+			@include tablet {
+				width: 324px;
+				height: 502px;
+			}
 			background-color: c.$secondary-color;
 			color: c.$primary-text-color;
 			padding: 20px;
@@ -92,8 +124,8 @@
 				justify-content: center;
 				align-items: center;
 				img {
-					width: 12vw;
-					height: 30vh;
+					width: 132px;
+					height: 164px;
 					object-fit: cover;
 					border-radius: 9px;
 				}
@@ -113,14 +145,26 @@
 	padding-bottom: 60px;
 	h2 {
 		font-weight: bold;
-		padding-bottom: 60px;
+		padding-bottom: 40px;
+		@include tablet {
+			padding-bottom: 60px;
+		}
 	}
 	.mision {
-		@include flexCenter(row, space-evenly, center);
+		@include flexCenter(column, center, center);
+		@include tablet {
+			@include flexCenter(row, space-evenly, center);
+		}
+		gap: 30px;
 		.earth {
 			width: 30vw;
 			display: flex;
-			gap: 40px;
+			flex-direction: column;
+			align-items: center;
+			@include tablet {
+				flex-direction: row;
+			}
+			gap: 10px;
 			color: #e86424;
 			img {
 				object-fit: contain;
@@ -128,6 +172,7 @@
 			p {
 				text-align: center;
 				font-size: 1.5em;
+				margin: 0px;
 			}
 		}
 	}
@@ -139,13 +184,22 @@
 .gallery {
 	h2 {
 		font-weight: bold;
-		padding-bottom: 60px;
+		padding-bottom: 40px;
 	}
 	.galleryImages {
-		@include flexCenter(row, space-between, center);
+		@include flexCenter(column, center, center);
+		flex-wrap: wrap;
+		row-gap: 30px;
+		@include tablet {
+			@include flexCenter(row, space-between, center);
+		}
 		img {
-			width: 28vw;
-			height: 45vh;
+			width: 296px;
+			height: 297px;
+			@include desktop {
+				width: 396px;
+				height: 398px;
+			}
 			object-fit: cover;
 			object-position: 5px 35%;
 			border-radius: 16px;
@@ -159,11 +213,19 @@
 .location {
 	color: #e86424;
 	h2 {
-		padding: 60px 0px;
+		padding: 40px 0px;
 	}
 	.map {
 		@include flexCenter(row, center, center);
 		padding-bottom: 50px;
+		img {
+			width: 330px;
+			height: 480px;
+			@include large {
+				width: 1300px;
+				height: 596px;
+			}
+		}
 	}
 	p,
 	h3 {

@@ -1,7 +1,6 @@
 @import './normalize.css';
 
 body {
-	margin: 0;
 	background-color: #ffefe7;
 	font-family: 'IBM Plex Sans', sans-serif;
 }
