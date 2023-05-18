@@ -4,7 +4,7 @@ import style from '../styles/components/header.module.scss'
 const Header = () => {
 	return (
 		<nav className={style.navbar}>
-			<p>Eco-store</p>
+			<h1>Eco-store</h1>
 			<Profile />
 		</nav>
 	)

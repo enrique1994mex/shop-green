@@ -7,6 +7,18 @@
 	height: auto;
 	padding: 40px;
 	color: white;
+	h3 {
+		font-size: c.$title-small;
+		@include desktop {
+			font-size: c.$title-medium;
+		}
+	}
+	p {
+		font-size: c.$text-small;
+		@include desktop {
+			font-size: c.$text-medium;
+		}
+	}
 	.social {
 		@include flexCenter(row, center, center);
 		gap: 40px;

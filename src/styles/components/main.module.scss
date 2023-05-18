@@ -25,23 +25,23 @@
 	}
 	row-gap: 20px;
 	h1 {
-		font-size: 1.5em;
+		font-size: c.$title-small;
 		@include small {
-			font-size: 2em;
+			font-size: c.$title-medium;
 		}
 		@include large {
-			font-size: 3em;
+			font-size: c.$title-large;
 		}
 		padding: 0px;
 		margin: 0px;
 	}
 	p {
-		font-size: 1em;
+		font-size: c.$text-small;
 		@include small {
-			font-size: 1.2em;
+			font-size: c.$text-medium;
 		}
 		@include large {
-			font-size: 1.5em;
+			font-size: c.$text-large;
 		}
 		margin: 0px;
 	}
@@ -51,10 +51,10 @@
 		border-style: none;
 		border-radius: 35px;
 		color: white;
-		font-size: 1em;
+		font-size: c.$text-small;
 		cursor: pointer;
 		@include desktop {
-			font-size: 1.5em;
+			font-size: c.$text-large;
 		}
 		&:hover {
 			transform: scale(1.1);
@@ -80,13 +80,13 @@
 .product {
 	width: 100%;
 	height: auto;
-
-	h2 {
-		font-size: 1.7em;
-	}
 	.healthcare {
 		padding-bottom: 60px;
 		h2 {
+			font-size: c.$title-small;
+			@include desktop {
+				font-size: c.$title-medium;
+			}
 			font-weight: 300;
 			padding-bottom: 60px;
 		}
@@ -139,8 +139,17 @@
 					border-radius: 9px;
 				}
 			}
+			h3 {
+				margin: 8px 0px;
+				font-size: c.$title-smaller;
+			}
+			p {
+				margin: 8px 0px;
+				font-size: c.$text-small;
+			}
 			button {
-				font-size: 1.2em;
+				font-size: c.$text-small;
+				margin: 8px 0px;
 				padding: 5px 10px;
 				background-color: c.$quaternion-color;
 				border-style: none;
@@ -162,7 +171,10 @@
 .aboutUs {
 	padding-bottom: 60px;
 	h2 {
-		font-weight: bold;
+		font-size: c.$title-small;
+		@include desktop {
+			font-size: c.$title-medium;
+		}
 		padding-bottom: 40px;
 		@include tablet {
 			padding-bottom: 60px;
@@ -189,7 +201,7 @@
 			}
 			p {
 				text-align: center;
-				font-size: 1.5em;
+				font-size: c.$text-large;
 				margin: 0px;
 			}
 		}
@@ -201,7 +213,10 @@
 
 .gallery {
 	h2 {
-		font-weight: bold;
+		font-size: c.$title-small;
+		@include desktop {
+			font-size: c.$title-medium;
+		}
 		padding-bottom: 40px;
 	}
 	.galleryImages {
@@ -231,6 +246,10 @@
 .location {
 	color: #e86424;
 	h2 {
+		font-size: c.$title-small;
+		@include desktop {
+			font-size: c.$title-medium;
+		}
 		padding: 40px 0px;
 	}
 	.map {
@@ -247,6 +266,6 @@
 	}
 	p,
 	h3 {
-		font-size: 1.5em;
+		font-size: c.$text-large;
 	}
 }

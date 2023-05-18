@@ -8,8 +8,11 @@
 	padding: 15px;
 	position: sticky;
 	top: -1px;
-	p {
-		font-size: 1.5em;
+	h1 {
+		font-size: c.$title-medium;
+		@include tablet {
+			font-size: c.$title-large;
+		}
 		padding-left: 30px;
 	}
 }
