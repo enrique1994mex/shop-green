@@ -17,7 +17,7 @@ const Profile = () => {
 			</button>
 			<button className={style.shopping}>
 				<img src={shopping} height='30' width='30' />
-				{state.products.length > 0 ? <div>{state.products.length}</div> : null}
+				{state.cart.length > 0 ? <div>{state.cart.length}</div> : null}
 			</button>
 		</div>
 	)

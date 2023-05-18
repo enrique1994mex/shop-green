@@ -52,6 +52,10 @@
 		border-radius: 35px;
 		color: white;
 		font-size: 1em;
+		cursor: pointer;
+		@include desktop {
+			font-size: 1.5em;
+		}
 		&:hover {
 			transform: scale(1.1);
 		}
@@ -101,7 +105,7 @@
 			height: auto;
 			@include tablet {
 				width: 324px;
-				height: 502px;
+				height: auto;
 			}
 			background-color: c.$secondary-color;
 			color: c.$primary-text-color;
@@ -112,6 +116,7 @@
 				display: flex;
 				justify-content: flex-end;
 				padding-bottom: 12px;
+				@include buttonStyle;
 				img {
 					width: 28px;
 					height: 28px;
@@ -126,9 +131,22 @@
 				img {
 					width: 132px;
 					height: 164px;
+					@include tablet {
+						width: 241px;
+						height: 300px;
+					}
 					object-fit: cover;
 					border-radius: 9px;
 				}
+			}
+			button {
+				font-size: 1.2em;
+				padding: 5px 10px;
+				background-color: c.$quaternion-color;
+				border-style: none;
+				color: white;
+				border-radius: 8px;
+				cursor: pointer;
 			}
 		}
 	}

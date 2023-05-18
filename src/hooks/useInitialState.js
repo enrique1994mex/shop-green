@@ -1,19 +1,26 @@
 import { useReducer } from 'react'
 
 export const actionTypes = {
-	addToProduct: 'ADD_TO_PRODUCT',
+	addToCart: 'ADD_TO_CART',
+	addToFavorites: 'ADD_TO_FAVORITES',
 }
 
 const initialState = {
-	products: [],
+	cart: [],
+	favorites: [],
 }
 
 const reducer = (state, action) => {
 	switch (action.type) {
-		case actionTypes.addToProduct:
+		case actionTypes.addToCart:
 			return {
 				...state,
-				products: [...state.products, action.payload],
+				cart: [...state.cart, action.payload],
+			}
+		case actionTypes.addToFavorites:
+			return {
+				...state,
+				favorites: [...state.favorites, action.payload],
 			}
 		default:
 			return state
